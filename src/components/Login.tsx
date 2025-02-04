@@ -57,7 +57,7 @@ export default function LoginForm() {
           Password
         </label>
         <input
-          className={`border-2 w-full h-10 ${
+          className={`border-2 p-4 w-full h-10 ${
             errors.password
               ? "border-red-500 outline-red-500"
               : "border-slate-500 outline-slate-500"

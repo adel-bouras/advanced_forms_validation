@@ -28,13 +28,12 @@ export default function LoginForm() {
     >
       <div className="w-full relative group">
         <label
-          className={`cursor-text absolute text-gray-500 top-2 left-2 group-focus-within:text-blue-500 group-focus-within:-top-5 group-focus-within:left-3 transition-all`}
+          className={`cursor-text absolute text-gray-500 top-2 left-2 group- group-focus-within:text-blue-500 group-focus-within:-top-5 group-focus-within:left-3 transition-all`}
           htmlFor="email"
         >
           Email
         </label>
         <input
-          placeholder=" "
           className={`p-4 border-2 w-full h-10 ${
             errors.email
               ? "border-red-500 outline-red-500"
@@ -50,7 +49,6 @@ export default function LoginForm() {
           </p>
         )}
       </div>
-
       <div className="w-full relative group">
         <label
           className={`cursor-text absolute text-gray-500 top-2 left-2 group-focus-within:text-blue-500 group-focus-within:-top-5 group-focus-within:left-3 transition-all`}

@@ -28,7 +28,7 @@ export default function LoginForm() {
     >
       <div className="w-full relative group">
         <label
-          className={`cursor-text absolute bg-white text-gray-500 top-2 left-2 group-focus-within:text-blue-500 group-focus-within:-top-2 group-focus-within:left-3 transition-all delay-0`}
+          className={`cursor-text absolute text-gray-500 top-2 left-2 group-focus-within:text-blue-500 group-focus-within:-top-5 group-focus-within:left-3 transition-all`}
           htmlFor="email"
         >
           Email
@@ -53,7 +53,7 @@ export default function LoginForm() {
 
       <div className="w-full relative group">
         <label
-          className={`cursor-text absolute bg-white text-gray-500 top-2 left-2 group-focus-within:text-blue-500 group-focus-within:-top-2 group-focus-within:left-3 transition-all`}
+          className={`cursor-text absolute text-gray-500 top-2 left-2 group-focus-within:text-blue-500 group-focus-within:-top-5 group-focus-within:left-3 transition-all`}
           htmlFor="password"
         >
           Password

@@ -23,47 +23,57 @@ export default function LoginForm() {
   };
   return (
     <form
-      className="flex flex-col items-start gap-5"
+      className="flex w-full flex-col items-start gap-5"
       onSubmit={handleSubmit(OnSubmit)}
     >
-      <label htmlFor="email">Email</label>
-      <input
-        className={`border-2 ${
-          errors.email
-            ? "border-red-500 outline-red-500"
-            : "border-slate-500 outline-slate-500"
-        } rounded-md shadow-2xl`}
-        {...register("email", {
-          required: "Email adress is required.",
-        })}
-        placeholder="Email"
-        type="text"
-        id="email"
-      />
-      {errors.email && (
-        <p className="text-red-500">
-          {errors.email.message}
-        </p>
-      )}
-      <label htmlFor="password">Password</label>
-      <input
-        className={`border-2 ${
-          errors.password
-            ? "border-red-500 outline-red-500"
-            : "border-slate-500 outline-slate-500"
-        } rounded-md shadow-2xl`}
-        {...register("password", {
-          required: "Password is required.",
-        })}
-        placeholder="Password"
-        type="password"
-        id="password"
-      />
-      {errors.password && (
-        <p className="text-red-500">
-          {errors.password.message}
-        </p>
-      )}
+      <div className="w-full relative group">
+        <label
+          className={`cursor-text absolute bg-white text-gray-500 top-2 left-2 group-focus-within:text-blue-500 group-focus-within:-top-2 group-focus-within:left-3 transition-all delay-0`}
+          htmlFor="email"
+        >
+          Email
+        </label>
+        <input
+          placeholder=" "
+          className={`p-4 border-2 w-full h-10 ${
+            errors.email
+              ? "border-red-500 outline-red-500"
+              : "border-slate-500 outline-slate-500"
+          } rounded-md shadow-lg`}
+          {...register("email")}
+          type="text"
+          id="email"
+        />
+        {errors.email && (
+          <p className="text-red-500">
+            {errors.email.message}
+          </p>
+        )}
+      </div>
+
+      <div className="w-full relative group">
+        <label
+          className={`cursor-text absolute bg-white text-gray-500 top-2 left-2 group-focus-within:text-blue-500 group-focus-within:-top-2 group-focus-within:left-3 transition-all`}
+          htmlFor="password"
+        >
+          Password
+        </label>
+        <input
+          className={`border-2 w-full h-10 ${
+            errors.password
+              ? "border-red-500 outline-red-500"
+              : "border-slate-500 outline-slate-500"
+          } rounded-md shadow-lg`}
+          {...register("password")}
+          type="password"
+          id="password"
+        />
+        {errors.password && (
+          <p className="text-red-500">
+            {errors.password.message}
+          </p>
+        )}
+      </div>
       <Button disabled={isSubmitting} type="submit">
         Login
       </Button>
